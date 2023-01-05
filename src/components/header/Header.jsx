@@ -1,21 +1,27 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import './Header.css';
 
+import './Header.css';
+import logo from '../../images/logo.png'
 const Header = ({ user }) => {
+
+
+
+    console.log(user.displayName)
+
     return (
         <nav className='header'>
 
-            <h1>hello world</h1>
+            <img src={logo} alt="" className='logo' />
             <div>
                 <Link to="/">Home</Link>
                 <Link to="/destination">Destination</Link>
 
-                <Link to="/about">Blog</Link>
+                <Link to="/blog">Blog</Link>
                 <Link to="/contact">Contact</Link>
                 {
-                    user ? <Link to="/">{user.displayName}</Link> :
+                    user.displayName ? <Link to="/profile" >{user.displayName}</Link> :
 
                         <Link to="/login" className='login-btn'>Login</Link>
                 }

@@ -6,27 +6,31 @@ import { onAuthStateChanged } from "firebase/auth";
 import { auth } from './firebase'
 import ProtectedRoutes from "./ProtectedRoutes";
 import Header from "./components/header/Header";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Destination from "./components/destination/Destination";
 import Contact from "./components/contact/Contact";
 import Search from "./components/search/Search";
+import Profile from "./components/profile/Profile";
 
 function App() {
   const [user, setUser] = useState({})
 
-  onAuthStateChanged(auth, (user) => {
-    if (user) {
-      // User is signed in, see docs for a list of available properties
-      // https://firebase.google.com/docs/reference/js/firebase.User
-      // const uid = user.uid;
-      setUser(user)
-      console.log(user)
-      // ...
-    } else {
-      // User is signed out
-      // ...
-    }
-  });
+  useEffect(() => {
+
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        // User is signed in, see docs for a list of available properties
+        // https://firebase.google.com/docs/reference/js/firebase.User
+        // const uid = user.uid;
+        setUser(user)
+        console.log(user)
+        // ...
+      } else {
+        // User is signed out
+        // ...
+      }
+    });
+  }, [user])
 
   return (
     <div>
@@ -38,6 +42,7 @@ function App() {
           <Route path="/destination" element={<Destination />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/search/:vahicle" element={<Search />} />
+          <Route path="/profile" element={<Profile user={user} setUser={setUser} />} />
         </Route>
 
         {/* <Route path="/" element={<Home />} /> */}

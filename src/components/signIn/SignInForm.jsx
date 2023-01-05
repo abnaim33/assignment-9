@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 
 import InputControl from "../inputControl/InputControl";
@@ -32,7 +32,11 @@ function SignInForm({ userLogin, setUserLogin }) {
                 await updateProfile(user, {
                     displayName: values.name,
                 });
-                navigate("/");
+                if (window.location.pathname === "/login") {
+                    navigate("/")
+                } else {
+                    navigate(`${window.location.pathname}`)
+                }
             })
             .catch((err) => {
                 setSubmitButtonDisabled(false);

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './Home.css'
 import Bike from '../../images/bike.png'
 import Car from '../../images/car.png'
@@ -27,8 +27,7 @@ const homeData = [
 
 const Home = () => {
 
-    // const [vahicle, setVahicle] = useState('')
-    // console.log(vahicle)
+
     return (
         <div className='home'>
             <div className="card-container">

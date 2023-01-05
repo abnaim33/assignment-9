@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useParams } from 'react-router-dom'
 import InputControl from '../inputControl/InputControl'
 import './Search.css'
-import Map from 'react-map-gl';
+
 import bike from '../../images/bike.png'
 import car from '../../images/car.png'
 import bus from '../../images/bus.png'
@@ -14,7 +14,7 @@ import map from '../../images/Map.png'
 const Search = () => {
     const { vahicle } = useParams()
 
-    console.log(vahicle)
+
     const [values, setValues] = useState({
         from: "",
         to: ""
@@ -138,7 +138,6 @@ const Search = () => {
 
 
                             </div>
-
 
                         </div> :
 
