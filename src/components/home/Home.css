@@ -1,0 +1,40 @@
+.home {
+    height: 100vh;
+    background-image: url('../../images/Bg.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-clip: content-box;
+    display: flex;
+
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+
+}
+
+.card img {
+    width: 100px;
+    height: 100px;
+}
+
+.card {
+    padding: 3rem;
+    border-radius: .4rem;
+    background: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.card h3 {
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+}

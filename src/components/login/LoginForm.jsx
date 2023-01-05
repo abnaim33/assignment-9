@@ -62,8 +62,8 @@ function LoginForm({ userLogin, setUserLogin }) {
                 </button>
                 <p>
                     Already have an account?{" "}
-                    <span onClick={() => setUserLogin(!userLogin)} style={{ cursor: "pointer" }}>
-                        Sign up
+                    <span onClick={() => setUserLogin(!userLogin)} style={{ cursor: "pointer", color: "orangered" }}>
+                        Create an account
                     </span>
                 </p>
             </div>

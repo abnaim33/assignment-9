@@ -1,20 +1,70 @@
-.container {
-    height: 100%;
-    min-height: 100vh;
-    width: 100%;
-    /* background: linear-gradient(to right, #9900ff, #cc80ff); */
+.search {
+    margin-top: 5rem;
     display: flex;
-    justify-content: center;
+    /* align-items: center; */
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: auto;
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+
+.places {
+    background: rgb(255, 95, 37);
+    color: white;
+
+}
+
+.places div {
+    border-left: 5px solid white;
+    margin-left: 1rem;
+    border-radius: 5px;
+}
+
+.places h3 {
+    margin-left: 5px;
+}
+
+.search-box {
+    margin-bottom: 3rem;
+}
+
+.search-suggestions div {
+    display: flex;
     align-items: center;
+    background: white;
+    margin-bottom: .5rem;
+    border-radius: .3rem;
+}
+
+.search-suggestions img {
+    width: 50px;
+    padding: 0 .5rem;
+}
+
+.search-suggestions div h4 {
+    margin-left: 1rem;
+}
+
+.search-suggestions div div {
+    display: flex;
+    align-items: center;
+    padding: 0 .5rem;
+}
+
+.search-suggestions div img {
+    width: 30px;
 }
 
 .innerBox {
-    min-width: 400px;
+    min-width: 200px;
     height: fit-content;
     width: fit-content;
-    background-color: #fff;
+    background-color: rgb(231, 230, 230);
     box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
-    padding: 30px;
+    padding: 20px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;

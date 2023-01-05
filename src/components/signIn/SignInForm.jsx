@@ -41,45 +41,45 @@ function SignInForm({ userLogin, setUserLogin }) {
     };
 
     return (
-            <div className={styles.innerBox}>
-                <h1 className={styles.heading}>SignIn</h1>
+        <div className={styles.innerBox}>
+            <h1 className={styles.heading}>SignIn</h1>
 
-                <InputControl
-                    label="Name"
-                    placeholder="Enter your name"
-                    onChange={(event) =>
-                        setValues((prev) => ({ ...prev, name: event.target.value }))
-                    }
-                />
-                <InputControl
-                    label="Email"
-                    placeholder="Enter email address"
-                    onChange={(event) =>
-                        setValues((prev) => ({ ...prev, email: event.target.value }))
-                    }
-                />
-                <InputControl
-                    label="Password"
-                    placeholder="Enter password"
-                    onChange={(event) =>
-                        setValues((prev) => ({ ...prev, pass: event.target.value }))
-                    }
-                />
+            <InputControl
+                label="Name"
+                placeholder="Enter your name"
+                onChange={(event) =>
+                    setValues((prev) => ({ ...prev, name: event.target.value }))
+                }
+            />
+            <InputControl
+                label="Email"
+                placeholder="Enter email address"
+                onChange={(event) =>
+                    setValues((prev) => ({ ...prev, email: event.target.value }))
+                }
+            />
+            <InputControl
+                label="Password"
+                placeholder="Enter password"
+                onChange={(event) =>
+                    setValues((prev) => ({ ...prev, pass: event.target.value }))
+                }
+            />
 
-                <div className={styles.footer}>
-                    <b className={styles.error}>{errorMsg}</b>
-                    <button onClick={handleSubmission} disabled={submitButtonDisabled}>
-                        SignIn
-                    </button>
-                    <p>
-                        Already have an account?{" "}
-                        <span onClick={() => setUserLogin(!userLogin)} style={{ cursor: "pointer" }}>
-                            Login
-                        </span>
-                    </p>
-                </div>
+            <div className={styles.footer}>
+                <b className={styles.error}>{errorMsg}</b>
+                <button onClick={handleSubmission} disabled={submitButtonDisabled}>
+                    SignIn
+                </button>
+                <p>
+                    Already have an account?{" "}
+                    <span onClick={() => setUserLogin(!userLogin)} style={{ cursor: "pointer", color: "orangered" }}>
+                        Login
+                    </span>
+                </p>
             </div>
-    
+        </div>
+
     );
 }
 

@@ -41,10 +41,9 @@ const Login = () => {
                 <SignInForm userLogin={userLogin} setUserLogin={setUserLogin} />}
 
 
-            <div>
-
-                <button onClick={() => handleGoogleSignIn()}>Signin with Google</button>
-
+            <div onClick={() => handleGoogleSignIn()} className={styles.googleBtn}>
+                <img src="https://res.cloudinary.com/dsuh9ww6d/image/upload/v1672889552/download_uvfdo2.png" alt="" />
+                <h4>Continue with Google</h4>
 
             </div>
 
